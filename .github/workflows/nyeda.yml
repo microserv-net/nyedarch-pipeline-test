@@ -15,17 +15,35 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install Rust (latest stable, auto per spec §69)
+      - name: Install Rust (latest stable, chosen automatically)
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.target }}
-      - name: Build capsule (release, hardened profile)
+
+      # The capsule source is not stored in this repository in the clear. Only
+      # this unlocker is, and it holds no secret: the key comes from a
+      # repository secret and exists only in this runner's memory.
+      - name: Build the unlocker
+        working-directory: runtime/unlock
+        run: cargo build --release
+
+      - name: Decrypt the capsule source
         working-directory: runtime
         env:
-          # Repository secrets are injected by the Actions runner and masked in
-          # logs. They are never printed by this workflow (spec §48).
-          NYEDARCH_GH_TO_CLIENT_PUB: ${{ secrets.NYEDARCH_GH_TO_CLIENT_PUB }}
+          NYEDARCH_SOURCE_KEY: ${{ secrets.NYEDARCH_SOURCE_KEY }}
+        shell: bash
+        run: |
+          if [ -z "$NYEDARCH_SOURCE_KEY" ]; then
+            echo "The NYEDARCH_SOURCE_KEY repository secret is missing." >&2
+            echo "Without it the capsule source cannot be decrypted." >&2
+            exit 1
+          fi
+          ./unlock/target/release/nyedarch-unlock capsule.sealed .
+
+      - name: Build capsule (release, hardened profile)
+        working-directory: runtime
         run: cargo build --release --target ${{ matrix.target }}
+
       - name: Stage capsule as .nyarch
         shell: bash
         working-directory: runtime
@@ -40,6 +58,16 @@ jobs:
           # Windows has no execute bit, so this is a no-op there by design.
           chmod +x "$out" || true
           ls -l "$out"
+
+      # The decrypted source must not outlive the build step, so that a later
+      # step or a cached workspace cannot expose it.
+      - name: Remove the decrypted source
+        if: always()
+        shell: bash
+        working-directory: runtime
+        run: |
+          rm -rf src vendor Cargo.toml Cargo.lock capsule.nyeda || true
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
