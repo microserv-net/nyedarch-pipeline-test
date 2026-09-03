@@ -1,0 +1,209 @@
+[1m[92m    Updating[0m crates.io index
+[1m[92m     Locking[0m 62 packages to latest compatible versions
+[1m[92m      Adding[0m argon2 v0.5.3 [1m[33m(available: v0.6.0)[0m
+[1m[92m      Adding[0m bincode v1.3.3 [1m[33m(available: v3.0.0)[0m
+[1m[92m      Adding[0m chacha20poly1305 v0.10.1 [1m[33m(available: v0.11.0)[0m
+[1m[92m      Adding[0m generic-array v0.14.7 [1m[33m(available: v0.14.9)[0m
+[1m[92m      Adding[0m getrandom v0.2.17 [1m[33m(available: v0.4.3)[0m
+[1m[92m      Adding[0m hkdf v0.12.4 [1m[33m(available: v0.13.0)[0m
+[1m[92m      Adding[0m hmac v0.12.1 [1m[33m(available: v0.13.0)[0m
+[1m[92m      Adding[0m miniz_oxide v0.8.9 [1m[33m(available: v0.9.1)[0m
+[1m[92m      Adding[0m sha2 v0.10.9 [1m[33m(available: v0.11.0)[0m
+[1m[92m      Adding[0m thiserror v1.0.69 [1m[33m(available: v2.0.20)[0m
+[1m[92m Downloading[0m crates ...
+[1m[92m  Downloaded[0m blake2 v0.10.6
+[1m[92m  Downloaded[0m adler2 v2.0.1
+[1m[92m  Downloaded[0m generic-array v0.14.7
+[1m[92m  Downloaded[0m dispatch2 v0.3.1
+[1m[92m  Downloaded[0m zstd v0.13.3
+[1m[92m  Downloaded[0m subtle v2.6.1
+[1m[92m  Downloaded[0m chacha20 v0.9.1
+[1m[92m  Downloaded[0m zeroize v1.9.0
+[1m[92m  Downloaded[0m cfg-if v1.0.4
+[1m[92m  Downloaded[0m bitflags v2.13.1
+[1m[92m  Downloaded[0m cpufeatures v0.2.17
+[1m[92m  Downloaded[0m find-msvc-tools v0.1.11
+[1m[92m  Downloaded[0m inout v0.1.4
+[1m[92m  Downloaded[0m quote v1.0.47
+[1m[92m  Downloaded[0m block2 v0.6.2
+[1m[92m  Downloaded[0m crypto-common v0.1.7
+[1m[92m  Downloaded[0m block-buffer v0.10.4
+[1m[92m  Downloaded[0m jobserver v0.1.35
+[1m[92m  Downloaded[0m objc2-core-location v0.3.2
+[1m[92m  Downloaded[0m universal-hash v0.5.1
+[1m[92m  Downloaded[0m version_check v0.9.5
+[1m[92m  Downloaded[0m digest v0.10.7
+[1m[92m  Downloaded[0m shlex v2.0.1
+[1m[92m  Downloaded[0m aead v0.5.2
+[1m[92m  Downloaded[0m base64ct v1.8.3
+[1m[92m  Downloaded[0m bincode v1.3.3
+[1m[92m  Downloaded[0m cipher v0.4.4
+[1m[92m  Downloaded[0m zeroize_derive v1.5.0
+[1m[92m  Downloaded[0m opaque-debug v0.3.1
+[1m[92m  Downloaded[0m objc2-contacts v0.3.2
+[1m[92m  Downloaded[0m objc2-encode v4.1.0
+[1m[92m  Downloaded[0m sha2 v0.10.9
+[1m[92m  Downloaded[0m thiserror v1.0.69
+[1m[92m  Downloaded[0m unicode-ident v1.0.24
+[1m[92m  Downloaded[0m zstd-safe v7.2.4
+[1m[92m  Downloaded[0m hmac v0.12.1
+[1m[92m  Downloaded[0m password-hash v0.5.0
+[1m[92m  Downloaded[0m pkg-config v0.3.34
+[1m[92m  Downloaded[0m rand_core v0.6.4
+[1m[92m  Downloaded[0m getrandom v0.2.17
+[1m[92m  Downloaded[0m poly1305 v0.8.0
+[1m[92m  Downloaded[0m thiserror-impl v1.0.69
+[1m[92m  Downloaded[0m argon2 v0.5.3
+[1m[92m  Downloaded[0m serde_core v1.0.229
+[1m[92m  Downloaded[0m serde_derive v1.0.229
+[1m[92m  Downloaded[0m chacha20poly1305 v0.10.1
+[1m[92m  Downloaded[0m miniz_oxide v0.8.9
+[1m[92m  Downloaded[0m proc-macro2 v1.0.107
+[1m[92m  Downloaded[0m serde v1.0.229
+[1m[92m  Downloaded[0m cc v1.4.4
+[1m[92m  Downloaded[0m typenum v1.20.1
+[1m[92m  Downloaded[0m hkdf v0.12.4
+[1m[92m  Downloaded[0m objc2-foundation v0.3.2
+[1m[92m  Downloaded[0m objc2 v0.6.4
+[1m[92m  Downloaded[0m syn v2.0.119
+[1m[92m  Downloaded[0m syn v3.0.4
+[1m[92m  Downloaded[0m zstd-sys v2.0.16+zstd.1.5.7
+[1m[92m  Downloaded[0m libc v0.2.189
+[1m[92m   Compiling[0m version_check v0.9.5
+[1m[92m   Compiling[0m typenum v1.20.1
+[1m[92m   Compiling[0m proc-macro2 v1.0.107
+[1m[92m   Compiling[0m generic-array v0.14.7
+[1m[92m   Compiling[0m unicode-ident v1.0.24
+[1m[92m   Compiling[0m quote v1.0.47
+[1m[92m   Compiling[0m subtle v2.6.1
+[1m[92m   Compiling[0m libc v0.2.189
+[1m[92m   Compiling[0m crypto-common v0.1.7
+[1m[92m   Compiling[0m block-buffer v0.10.4
+[1m[92m   Compiling[0m digest v0.10.7
+[1m[92m   Compiling[0m syn v2.0.119
+[1m[92m   Compiling[0m cfg-if v1.0.4
+[1m[92m   Compiling[0m jobserver v0.1.35
+[1m[92m   Compiling[0m objc2 v0.6.4
+[1m[92m   Compiling[0m find-msvc-tools v0.1.11
+[1m[92m   Compiling[0m shlex v2.0.1
+[1m[92m   Compiling[0m cc v1.4.4
+[1m[92m   Compiling[0m inout v0.1.4
+[1m[92m   Compiling[0m objc2-encode v4.1.0
+[1m[92m   Compiling[0m thiserror v1.0.69
+[1m[92m   Compiling[0m pkg-config v0.3.34
+[1m[92m   Compiling[0m serde_core v1.0.229
+[1m[92m   Compiling[0m zstd-sys v2.0.16+zstd.1.5.7
+[1m[92m   Compiling[0m cpufeatures v0.2.17
+[1m[92m   Compiling[0m hmac v0.12.1
+[1m[92m   Compiling[0m syn v3.0.4
+[1m[92m   Compiling[0m universal-hash v0.5.1
+[1m[92m   Compiling[0m opaque-debug v0.3.1
+[1m[92m   Compiling[0m serde v1.0.229
+[1m[92m   Compiling[0m base64ct v1.8.3
+[1m[92m   Compiling[0m zeroize_derive v1.5.0
+[1m[92m   Compiling[0m thiserror-impl v1.0.69
+[1m[92m   Compiling[0m zeroize v1.9.0
+[1m[92m   Compiling[0m cipher v0.4.4
+[1m[92m   Compiling[0m rand_core v0.6.4
+[1m[92m   Compiling[0m serde_derive v1.0.229
+[1m[92m   Compiling[0m password-hash v0.5.0
+[1m[92m   Compiling[0m chacha20 v0.9.1
+[1m[92m   Compiling[0m poly1305 v0.8.0
+[1m[92m   Compiling[0m sha2 v0.10.9
+[1m[92m   Compiling[0m blake2 v0.10.6
+[1m[92m   Compiling[0m aead v0.5.2
+[1m[92m   Compiling[0m bitflags v2.13.1
+[1m[92m   Compiling[0m chacha20poly1305 v0.10.1
+[1m[92m   Compiling[0m argon2 v0.5.3
+[1m[92m   Compiling[0m hkdf v0.12.4
+[1m[92m   Compiling[0m getrandom v0.2.17
+[1m[92m   Compiling[0m zstd-safe v7.2.4
+[1m[92m   Compiling[0m nyedarch-crypto v0.0.1 (/Users/runner/work/nyedarch-pipeline-test/nyedarch-pipeline-test/runtime/vendor/nyedarch-crypto)
+[1m[92m   Compiling[0m bincode v1.3.3
+[1m[92m   Compiling[0m objc2-foundation v0.3.2
+[1m[92m   Compiling[0m dispatch2 v0.3.1
+[1m[92m   Compiling[0m block2 v0.6.2
+[1m[92m   Compiling[0m adler2 v2.0.1
+[1m[92m   Compiling[0m miniz_oxide v0.8.9
+[1m[92m   Compiling[0m objc2-contacts v0.3.2
+[1m[92m   Compiling[0m nyedarch-core v0.0.1 (/Users/runner/work/nyedarch-pipeline-test/nyedarch-pipeline-test/runtime/vendor/nyedarch-core)
+[1m[92m   Compiling[0m objc2-core-location v0.3.2
+[1m[92m   Compiling[0m nyedarch-fingerprint v0.0.1 (/Users/runner/work/nyedarch-pipeline-test/nyedarch-pipeline-test/runtime/vendor/nyedarch-fingerprint)
+[1m[92m   Compiling[0m nyedarch-platform v0.0.1 (/Users/runner/work/nyedarch-pipeline-test/nyedarch-pipeline-test/runtime/vendor/nyedarch-platform)
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:282:13
+    [1m[94m|[0m
+[1m[94m282[0m [1m[94m|[0m         if !unsafe { CLLocationManager::locationServicesEnabled() } {
+    [1m[94m|[0m             [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+[1m[92mnote[0m: the lint level is defined here
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:20:11
+    [1m[94m|[0m
+[1m[94m 20[0m [1m[94m|[0m #![forbid(unsafe_code)]
+    [1m[94m|[0m           [1m[92m^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:286:23
+    [1m[94m|[0m
+[1m[94m286[0m [1m[94m|[0m         let manager = unsafe { CLLocationManager::new() };
+    [1m[94m|[0m                       [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:287:9
+    [1m[94m|[0m
+[1m[94m287[0m [1m[94m|[0m         unsafe { manager.requestWhenInUseAuthorization() };
+    [1m[94m|[0m         [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:292:26
+    [1m[94m|[0m
+[1m[94m292[0m [1m[94m|[0m             let status = unsafe { manager.authorizationStatus() };
+    [1m[94m|[0m                          [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:298:32
+    [1m[94m|[0m
+[1m[94m298[0m [1m[94m|[0m             if let Some(loc) = unsafe { manager.location() } {
+    [1m[94m|[0m                                [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:299:29
+    [1m[94m|[0m
+[1m[94m299[0m [1m[94m|[0m                 let coord = unsafe { loc.coordinate() };
+    [1m[94m|[0m                             [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[91merror[0m[1m: usage of an `unsafe` block[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:300:32
+    [1m[94m|[0m
+[1m[94m300[0m [1m[94m|[0m                 let accuracy = unsafe { loc.horizontalAccuracy() };
+    [1m[94m|[0m                                [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+[1m[33mwarning[0m[1m: use of deprecated method `objc2_core_location::CLLocationManager::locationServicesEnabled`[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:282:41
+    [1m[94m|[0m
+[1m[94m282[0m [1m[94m|[0m         if !unsafe { CLLocationManager::locationServicesEnabled() } {
+    [1m[94m|[0m                                         [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: `#[warn(deprecated)]` on by default
+
+[1m[91merror[E0061][0m[1m: this function takes 1 argument but 0 arguments were supplied[0m
+   [1m[94m--> [0mvendor/nyedarch-platform/src/lib.rs:282:22
+    [1m[94m|[0m
+[1m[94m282[0m [1m[94m|[0m         if !unsafe { CLLocationManager::locationServicesEnabled() } {
+    [1m[94m|[0m                      [1m[91m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[1m[94m--[0m [1m[94margument #1 of type `&CLLocationManager` is missing[0m
+    [1m[94m|[0m
+[1m[92mnote[0m: method defined here
+   [1m[94m--> [0m/Users/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/objc2-core-location-0.3.2/src/generated/CLLocationManager.rs:199:23
+    [1m[94m|[0m
+[1m[94m199[0m [1m[94m|[0m         pub unsafe fn locationServicesEnabled(&self) -> bool;
+    [1m[94m|[0m                       [1m[92m^^^^^^^^^^^^^^^^^^^^^^^[0m
+[1m[96mhelp[0m: provide the argument
+    [1m[94m|[0m
+[1m[94m282[0m [1m[94m| [0m        if !unsafe { CLLocationManager::locationServicesEnabled([92m/* &CLLocationManager */[0m) } {
+    [1m[94m|[0m                                                                 [92m++++++++++++++++++++++++[0m
+
+[1mFor more information about this error, try `rustc --explain E0061`.[0m
+[1m[33mwarning[0m: `nyedarch-platform` (lib) generated 1 warning
+[1m[91merror[0m: could not compile `nyedarch-platform` (lib) due to 8 previous errors; 1 warning emitted
+[1m[33mwarning[0m: build failed, waiting for other jobs to finish...
+exit=101
