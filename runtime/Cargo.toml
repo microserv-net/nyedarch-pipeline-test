@@ -22,7 +22,7 @@ zeroize = { version = "1", features = ["derive"] }
 getrandom = "0.2"
 
 [package]
-name = "nyedarch-capsule-5ab657e5451710b0"
+name = "nyedarch-capsule-bbe8e954ca0288aa"
 version = "0.0.1"
 edition = "2021"
 
