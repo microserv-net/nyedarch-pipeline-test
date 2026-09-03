@@ -1,3 +1,8 @@
+# Its own workspace on purpose: this crate is unpacked next to the encrypted
+# capsule source, and without this cargo would try to treat it as a member of
+# whatever workspace happens to sit above it and refuse to build.
+[workspace]
+
 [package]
 name = "nyedarch-unlock"
 version = "0.0.1"
