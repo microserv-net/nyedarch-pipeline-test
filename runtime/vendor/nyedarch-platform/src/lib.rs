@@ -17,7 +17,12 @@
 //! - **Linux**: GeoClue2 over D-Bus where the service is present and the user
 //!   consents. Absent on headless systems, which correctly fail closed.
 
-#![forbid(unsafe_code)]
+// Unsafe code is forbidden outright everywhere except the macOS CoreLocation
+// binding, which calls Objective-C and cannot avoid it. `forbid` cannot be
+// lifted locally, so macOS uses `deny` plus a single, narrowly scoped
+// `allow` on that module. Linux and Windows keep the absolute guarantee.
+#![cfg_attr(not(target_os = "macos"), forbid(unsafe_code))]
+#![cfg_attr(target_os = "macos", deny(unsafe_code))]
 
 use nyedarch_crypto::geo::Reading;
 
@@ -272,17 +277,16 @@ fn acquire() -> Option<Reading> {
 /// and polls briefly for one to appear. It is a smaller surface for the same
 /// result, and it cannot hang: it gives up and returns `None`.
 #[cfg(all(target_os = "macos", feature = "macos-corelocation"))]
+#[allow(unsafe_code)] // Objective-C calls; see the crate-level note.
 mod macos_corelocation {
     use super::Reading;
     use objc2_core_location::{CLAuthorizationStatus, CLLocationManager};
 
     pub fn acquire() -> Option<Reading> {
-        // Location Services switched off system-wide: stop here rather than
-        // spinning for a fix that cannot arrive.
-        if !unsafe { CLLocationManager::locationServicesEnabled() } {
-            return None;
-        }
-
+        // `locationServicesEnabled` is deprecated and needs a receiver, so the
+        // system-wide check is folded into the authorization status below:
+        // Denied or Restricted covers "switched off" as well as "refused", and
+        // the poll gives up regardless.
         let manager = unsafe { CLLocationManager::new() };
         unsafe { manager.requestWhenInUseAuthorization() };
 
