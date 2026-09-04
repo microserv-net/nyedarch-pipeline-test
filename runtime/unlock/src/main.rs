@@ -13,7 +13,7 @@ use std::path::{Path, PathBuf};
 use chacha20poly1305::aead::{Aead, KeyInit, Payload};
 use chacha20poly1305::{XChaCha20Poly1305, XNonce};
 
-const MAGIC: &[u8; 10] = b"NYARCHIVE1";
+const MAGIC: &[u8; 10] = b"NYARCHIVE2";
 const AAD: &[u8] = b"nyedarch:v1:source-archive";
 
 fn die(msg: &str) -> ! {
@@ -72,6 +72,9 @@ fn main() {
         if i + nlen > plain.len() { die("truncated entry name"); }
         let name = String::from_utf8_lossy(&plain[i..i+nlen]).to_string();
         i += nlen;
+        if i >= plain.len() { die("truncated entry flags"); }
+        let flags = plain[i];
+        i += 1;
         if i + 8 > plain.len() { die("truncated entry length"); }
         let dlen = u64::from_le_bytes(plain[i..i+8].try_into().unwrap()) as usize;
         i += 8;
@@ -90,6 +93,15 @@ fn main() {
         }
         std::fs::write(&dest, data)
             .unwrap_or_else(|e| die(&format!("cannot write {}: {e}", dest.display())));
+        // Restore the executable bit. Without this an unpacked script cannot
+        // run, which is how this was found.
+        #[cfg(unix)]
+        if flags & 1 != 0 {
+            use std::os::unix::fs::PermissionsExt;
+            let _ = std::fs::set_permissions(&dest, std::fs::Permissions::from_mode(0o755));
+        }
+        #[cfg(not(unix))]
+        let _ = flags;
         count += 1;
     }
     println!("nyedarch-unlock: restored {count} file(s) into {}", out_root.display());
